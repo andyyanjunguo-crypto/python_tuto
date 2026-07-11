@@ -1,0 +1,6 @@
+name='jay'
+age=22
+if name == 'Daniel':
+    print('True.')
+elif age == 22:
+    print('False.')

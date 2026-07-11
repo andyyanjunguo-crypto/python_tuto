@@ -1,0 +1,4 @@
+def print_letters(word):
+    for i in range(len(word)):
+        print(word[i])
+print_letters("Hello")

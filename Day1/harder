@@ -1,0 +1,10 @@
+name = 'jay'
+age = 22
+if name == 'Daniel':
+    print('Hi, Daniel.')
+elif age < 18:
+    print('Incorrect age, too young.')
+elif age > 30:
+    print('Similar in age, too old.')
+elif age == 22:
+    print('You are jay.')
