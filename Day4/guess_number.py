@@ -1,17 +1,19 @@
-import random
 
-target = random.randint(0, 100)
-print("Welcome to the Guess the Number Game!")
 
-number = -1
-count = 0
-while target != number: #need variable to count how many times user guessed
-    count += 1
-    number = int(input("Please enter a number between 0 and 100: "))
-    if number < target:
-        print("Your guess is too low.")
-    elif number > target:
-        print("Your guess is too high.")
+number = random.randint(1, 100)
+attempts = 0
+
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 and 100.")
+
+while True:
+    guess = int(input("Enter your guess: "))
+    attempts += 1
+
+    if guess < number:
+        print("Too low! Try again.")
+    elif guess > number:
+        print("Too high! Try again.")
     else:
-        print("Congratulations! You guessed the correct number.")
-#
+        print(f"Congratulations! You guessed the number in {attempts} attempts.")
+        break
