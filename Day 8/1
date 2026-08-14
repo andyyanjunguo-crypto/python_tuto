@@ -1,0 +1,5 @@
+a = "abcdefgh"  
+
+for x in range(-1, -7, -1):
+    print(a[x], end="")
+print()
