@@ -2,15 +2,13 @@ students = [
     {"name": "Tom", "age": 20, "score": 85},
     {"name": "Alice", "age": 21, "score": 92},
 ]
- 
- 
+
 def find_student(name):
     """Return the student dict matching name (case-insensitive), or None if not found."""
     for student in students:
         if student["name"].lower() == name.lower():
             return student
     return None
- 
  
 def add_student():
     name = input("Enter student name: ").strip()
