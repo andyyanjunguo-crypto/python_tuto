@@ -1,7 +1,0 @@
-s = "helllo"
-
-i = s.find('l')          # 2  -> first 'l'
-i = s.find('l', i + 1)   # 3  -> second 'l'
-
-s = s[:i] + 'w' + s[i+2:]
-print(s)                 # helwlo

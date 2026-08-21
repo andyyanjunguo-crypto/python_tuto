@@ -1,0 +1,7 @@
+s = "helllo"
+
+i = s.find('l')          #first 'l'
+i = s.find('l', i + 1)   #second 'l'
+
+s = s[:i] + 'w' + s[i+1:]
+print(s)                 #helwlo

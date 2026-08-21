@@ -1,0 +1,113 @@
+students = [
+    {"name": "Tom", "age": 20, "score": 85},
+    {"name": "Alice", "age": 21, "score": 92},
+]
+ 
+ 
+def find_student(name):
+    """Return the student dict matching name (case-insensitive), or None if not found."""
+    for student in students:
+        if student["name"].lower() == name.lower():
+            return student
+    return None
+ 
+ 
+def add_student():
+    name = input("Enter student name: ").strip()
+ 
+    if find_student(name):
+        print(f"Error: a student named '{name}' already exists.")
+        return
+ 
+    try:
+        age = int(input("Enter age: "))
+        score = float(input("Enter score: "))
+    except ValueError:
+        print("Error: age must be a whole number and score must be a number.")
+        return
+ 
+    students.append({"name": name, "age": age, "score": score})
+    print(f"Student '{name}' added successfully.")
+ 
+ 
+def remove_student():
+    name = input("Enter the name of the student to remove: ").strip()
+    student = find_student(name)
+ 
+    if student is None:
+        print("Error: student cannot be found.")
+        return
+ 
+    students.remove(student)
+    print(f"Student '{name}' removed successfully.")
+ 
+ 
+def show_all_students():
+    if not students:
+        print("No students in the system.")
+        return
+ 
+    print("\n{:<15}{:<8}{:<8}".format("Name", "Age", "Score"))
+    print("-" * 31)
+    for student in students:
+        print("{:<15}{:<8}{:<8}".format(student["name"], student["age"], student["score"]))
+    print()
+ 
+ 
+def show_average_score():
+    if not students:
+        print("No students in the system.")
+        return
+ 
+    total = sum(student["score"] for student in students)
+    average = total / len(students)
+    print(f"Average score: {average:.2f}")
+ 
+ 
+def find_highest_score():
+    if not students:
+        print("No students in the system.")
+        return
+ 
+    top_student = students[0]
+    for student in students:
+        if student["score"] > top_student["score"]:
+            top_student = student
+ 
+    print(f"Highest score: {top_student['name']} ({top_student['score']})")
+ 
+ 
+def show_menu():
+    print("\n=== Student Management System ===")
+    print("1. Add student")
+    print("2. Remove student")
+    print("3. Show all students")
+    print("4. Show average score")
+    print("5. Find highest score")
+    print("6. Exit")
+ 
+ 
+def main():
+    while True:
+        show_menu()
+        choice = input("Please choose an option (1-6): ").strip()
+ 
+        if choice == "1":
+            add_student()
+        elif choice == "2":
+            remove_student()
+        elif choice == "3":
+            show_all_students()
+        elif choice == "4":
+            show_average_score()
+        elif choice == "5":
+            find_highest_score()
+        elif choice == "6":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option. Please choose a number between 1 and 6.")
+ 
+ 
+if __name__ == "__main__":
+    main()
