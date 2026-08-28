@@ -60,6 +60,7 @@ def show_average_score():
         return
  
     total = sum(student["score"] for student in students)
+    
     average = total / len(students)
     print(f"Average score: {average:.2f}")
  
