@@ -7,14 +7,12 @@ class Student:
 
 class StudentManager:
     def __init__(self):
-        # The list now lives inside the manager instead of being a global.
         self.students = [
             Student("Tom", 20, 85),
             Student("Alice", 21, 92),
         ]
 
     def find_student(self, name):
-        """Return the Student matching name (case-insensitive), or None if not found."""
         for student in self.students:
             if student.name.lower() == name.lower():
                 return student
