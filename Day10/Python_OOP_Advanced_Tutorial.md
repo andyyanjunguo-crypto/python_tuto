@@ -199,12 +199,24 @@ class User:
     def from_dict(cls, data: dict):
         return cls(username=data["username"], email=data["email"])
 
+    @classmethod
+    def from_str(cls, str: String):
+        parts = str.split(',') # "lucase, aaa@bbb.com" -> ['lucase', 'aaa@bbb.com']
+        if len(parts) != 2:
+            print ("we need username and email")
+            return None
+        return cls(username=parts[0], email=parts[1])
+
     # 3. 静态方法：工具函数
     @staticmethod
     def is_valid_email(email: str) -> bool:
         return "@" in email and "." in email
 
 # 使用类方法创建对象
+# create user instance from constractor
+user1 = User(username: "abc", email:"abc@gmail.com")
+user1.send_email(message: "hello")
+
 user_data = {"username": "alex", "email": "alex@example.com"}
 user = User.from_dict(user_data)
 

@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text-color: #1f2937;
+    --secondary-text: #64748b;
+    --page-background: #eff6ff;
+    --card-background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--page-background);
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.profile-card {
+    width: min(100%, 380px);
+    padding: 32px;
+
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+}
+
+.profile-card__avatar {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+    border: 4px dotted var(--primary-color);
+    border-radius: 20%;
+}
+
+.profile-card__name {
+    margin: 20px 0 8px;
+    font-size: 2rem;
+}
+
+.profile-card__role {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.profile-card__description {
+    margin: 20px 0;
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.profile-card__skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-card__skills li {
+    padding: 6px 12px;
+
+    color: var(--primary-dark);
+    background-color: #dbeafe;
+    border-radius: 999px;
+}
+
+.profile-card__button {
+    display: inline-block;
+    padding: 12px 24px;
+
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.profile-card__button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.04);
+}
+
+.profile-card__button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 4px;
+    transform: scale(10.04);
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 24px 18px;
+    }
+
+    .profile-card__name {
+        font-size: 1.7rem;
+    }
+}
