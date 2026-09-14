@@ -23,8 +23,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh;
-    padding: 20px;
+    min-height: 75vh;
+    padding: 25px;
 }
 
 .profile-card {
@@ -47,8 +47,8 @@ body {
 }
 
 .profile-card__avatar {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 
     object-fit: cover;
     border: 4px dotted var(--primary-color);
