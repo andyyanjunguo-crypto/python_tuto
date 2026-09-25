@@ -1,0 +1,1 @@
+console.log("Pokémon Trainer Lab started!");

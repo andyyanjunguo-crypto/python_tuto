@@ -18,9 +18,10 @@
                 class="profile-card__avatar"
                 src="./images/face2.jpg"
                 alt="小明的头像"
+                data-avatar="44"
             >
 
-            <h1 class="profile-card__name">小明</h1>
+            <h1 id="profile_name" class="profile-card__name">小明</h1>
 
             <p class="profile-card__role">
                 HTML 和 CSS 学习者
@@ -30,19 +31,31 @@
                 我喜欢编程、游戏和足球，现在正在学习如何制作网页。
             </p>
 
-            <ul class="profile-card__skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Python</li>
+            <ul id="list" class="profile-card__skills">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item">Python</li>
             </ul>
 
-            <a class="profile-card__button" href="mailto:weilu@me.com">
-                联系我
-            </a>
+            <button id="add_skill" class="profile-card__button" href="mailto:weilu@me.com">
+                添加Skill
+            </button>
         </article>
     </main>
     <footer>
         footer1
     </footer>
+    <script>
+        const btn=document.querySelector("#add_skill");
+
+        btn.addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.textContent = "Swift"
+
+            const list = document.querySelector("#list");
+            list.append(li);
+        });
+
+    </script>
 </body>
 </html>

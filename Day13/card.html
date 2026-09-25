@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>card background color</title>
+        <link href="card.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="card" class="dark">
+        <h2>My Card</h2>
+        <p>Click the button to change me.</p>
+        </div>
+        <button id="toggleBtn">Toggle style</button>
+
+        <script>
+            // find 2 elements
+            const card = document.querySelector("#card")
+            const btn = document.querySelector("#toggleBtn")
+
+            btn.addEventListener('click', () => {
+                card.classList.remove("dark")
+            })
+        </script>
+    </body>
+</html>

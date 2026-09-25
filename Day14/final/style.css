@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 40px;
+}
+
+
+h1 {
+    margin-bottom: 5px;
+}
+
+
+.instruction {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* -------------------------
+   Pokémon Card
+------------------------- */
+
+.pokemon-card {
+
+    width: 380px;
+
+    margin: auto;
+
+    background-color: white;
+
+    border: 5px solid #f2c94c;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#pokemon-name {
+
+    font-size: 32px;
+
+    margin-bottom: 0;
+}
+
+
+#pokemon-number {
+
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+/* Pokémon image */
+
+#pokemon-image {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: contain;
+}
+
+
+/* Type */
+
+#pokemon-type {
+
+    background-color: #ffd84d;
+
+    padding: 6px 12px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+
+/* -------------------------
+   Stats
+------------------------- */
+
+.stat {
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 40px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+    text-align: left;
+}
+
+
+.bar {
+
+    height: 14px;
+
+    background-color: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.bar-fill {
+
+    height: 100%;
+
+    background-color: #4caf50;
+
+    transition: width 0.4s;
+}
+
+
+/* -------------------------
+   Message
+------------------------- */
+
+#message {
+
+    min-height: 25px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+/* -------------------------
+   Buttons
+------------------------- */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+button {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+#power-btn {
+    background-color: #ffd84d;
+}
+
+
+#damage-btn {
+    background-color: #ff7675;
+}
+
+
+#evolve-btn {
+    background-color: #a29bfe;
+}
+
+
+#reset-btn {
+    background-color: #dfe6e9;
+}
+
+
+button:hover {
+
+    opacity: 0.8;
+
+    transform: scale(1.03);
+}

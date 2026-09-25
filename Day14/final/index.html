@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokémon Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>⚡ Pokémon Trainer Lab</h1>
+
+    <p class="instruction">
+        Use JavaScript to train your Pokémon!
+    </p>
+
+
+    <!-- Pokémon Card -->
+    <div class="pokemon-card">
+
+        <h2 id="pokemon-name">
+            Pikachu
+        </h2>
+
+        <p id="pokemon-number">
+            #025
+        </p>
+
+        <img id="pokemon-image"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+            alt="Pikachu">
+
+
+        <!-- Type -->
+
+        <p>
+            Type:
+            <span id="pokemon-type">
+                ⚡ Electric
+            </span>
+        </p>
+
+
+        <!-- Level -->
+
+        <p>
+            Level:
+            <span id="level">5</span>
+        </p>
+
+
+        <!-- HP -->
+
+        <div class="stat">
+
+            <span>❤️ HP</span>
+
+            <div class="bar">
+                <div id="hp-bar" class="bar-fill" style="width: 70%;">
+                </div>
+            </div>
+
+            <span id="hp">
+                35
+            </span>
+
+        </div>
+
+
+        <!-- Attack -->
+
+        <div class="stat">
+
+            <span>⚔️ Attack</span>
+
+            <div class="bar">
+                <div id="attack-bar" class="bar-fill" style="width: 55%;">
+                </div>
+            </div>
+
+            <span id="attack">
+                55
+            </span>
+
+        </div>
+
+
+        <!-- Defense -->
+
+        <div class="stat">
+
+            <span>🛡️ Defense</span>
+
+            <div class="bar">
+                <div id="defense-bar" class="bar-fill" style="width: 40%;">
+                </div>
+            </div>
+
+            <span id="defense">
+                40
+            </span>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <p id="message">
+            Pikachu is ready!
+        </p>
+
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button id="power-btn">
+                ⚡ Power Up
+            </button>
+
+            <button id="damage-btn">
+                💥 Take Damage
+            </button>
+
+            <button id="evolve-btn">
+                ✨ Evolve
+            </button>
+
+            <button id="reset-btn">
+                🔄 Reset
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
