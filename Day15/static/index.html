@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>⚡ Pokémon Trainer Lab</h1>
+
+    <p class="instruction">
+        Real data from <strong>our own Python API</strong>!
+    </p>
+
+
+    <!-- Search -->
+    <form id="search-form" class="search">
+
+        <input id="search-input" type="text" placeholder="pikachu, 25, mr-mime..." autocomplete="off">
+
+        <button type="submit" id="search-btn">🔍 Search</button>
+
+        <button type="button" id="random-btn">🎲 Random</button>
+
+    </form>
+
+
+    <!-- Pokémon Card -->
+    <div class="pokemon-card">
+
+        <h2 id="pokemon-name">???</h2>
+
+        <p id="pokemon-number">#000</p>
+
+        <img id="pokemon-image" src="" alt="">
+
+        <!-- Types -->
+        <div id="pokemon-types" class="types"></div>
+
+        <p class="size">
+            📏 <span id="height">-</span> m &nbsp; ⚖️ <span id="weight">-</span> kg
+        </p>
+
+
+        <!-- Stats -->
+        <div class="stat">
+            <span>❤️ HP</span>
+            <div class="bar"><div id="hp-bar" class="bar-fill"></div></div>
+            <span id="hp">-</span>
+        </div>
+
+        <div class="stat">
+            <span>⚔️ Attack</span>
+            <div class="bar"><div id="attack-bar" class="bar-fill"></div></div>
+            <span id="attack">-</span>
+        </div>
+
+        <div class="stat">
+            <span>🛡️ Defense</span>
+            <div class="bar"><div id="defense-bar" class="bar-fill"></div></div>
+            <span id="defense">-</span>
+        </div>
+
+        <div class="stat">
+            <span>💨 Speed</span>
+            <div class="bar"><div id="speed-bar" class="bar-fill"></div></div>
+            <span id="speed">-</span>
+        </div>
+
+
+        <!-- Message -->
+        <p id="message">Type a name and press Search!</p>
+
+    </div>
+
+
+    <!-- 让学生看到每次调用了哪个 API -->
+    <p id="request-log" class="request-log"></p>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
