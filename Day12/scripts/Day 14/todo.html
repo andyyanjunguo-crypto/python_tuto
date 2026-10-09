@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todo</title>
+<style>
+  .done { text-decoration: line-through; color: gray; }
+</style>
+</head>
+<body>
+
+<h1 id="title">Todo (0)</h1>
+<input id="todoInput" placeholder="Add todo">
+<button id="addTodo">Add</button>
+<ul id="todoList"></ul>
+
+<script>
+  const input = document.querySelector('#todoInput');
+  const button   = document.querySelector('#addTodo');
+  const list  = document.querySelector('#todoList');
+  const title = document.querySelector('#title');
+
+
+  button.addEventListener('click', () => {
+    const text = input.value.trim();
+    if (!text) return;
+
+    const li = document.createElement('li');
+    li.textContent = text + ' ';
+
+    const del = document.createElement('button');   
+    del.textContent = 'Delete';
+    li.append(del);
+
+    list.append(li);
+    input.value = '';
+    updateCount();
+  });
+
+ 
+  list.addEventListener('click', (e) => {
+    const li = e.target.closest('li');
+
+    if (e.target.tagName === 'BUTTON') {
+      li.remove();                    
+    } else {
+      li.classList.toggle('Done');    
+    }
+    updateCount();
+  });
+</script>
+
+</body>
+</html>
+
