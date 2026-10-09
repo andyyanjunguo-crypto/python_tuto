@@ -55,7 +55,7 @@ Day15/
 cd Day15
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 检查环境：运行 `python step1_call_pokeapi.py`，能打印出 pikachu 的信息，说明 Python 环境和网络都正常。
@@ -197,7 +197,7 @@ JSON 看起来几乎就是 Python 的 dict + list！所以在 Python 里处理 A
 ```python
 import httpx
 
-response = httpx.get("https://pokeapi.co/api/v2/pokemon/pikachu")
+response = httpx.get("https://pokeapi.co/api/v2/pokemon/pikachu?param1=value1&param2=value2&param3=value3")
 
 print(response.status_code)   # 200
 data = response.json()        # JSON 文本 → Python dict
@@ -212,7 +212,8 @@ PokeAPI 返回的数据结构（节选）：
 {
   "name": "pikachu",
   "types": [
-    { "slot": 1, "type": { "name": "electric", "url": "..." } }
+    { "slot": 1, "type": { "name": "electric", "url": "..." } },
+    { "slot": 2, "type": { "name": "electric2", "url": "..." } }
   ],
   "stats": [
     { "base_stat": 35, "stat": { "name": "hp" } },
@@ -284,7 +285,7 @@ def get_pokemon(name: str) -> dict | None:
 📄 文件：`step2_hello_fastapi.py`
 
 ```bash
-uvicorn step2_hello_fastapi:app --reload
+python3 -m uvicorn step2_hello_fastapi:app --reload
 ```
 
 | 部分 | 含义 |

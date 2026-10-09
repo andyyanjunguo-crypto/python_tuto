@@ -131,6 +131,7 @@ async def get_pokemon_data(name_or_id: str) -> Pokemon:
 # 3. 接口 (Endpoints)
 # ----------------------------------------
 
+# https://yanjunapi.com/api/v1/
 @app.get("/")
 def home():
     return {
@@ -139,7 +140,7 @@ def home():
         "card": "/card/",
     }
 
-
+# https://yanjunapi.com/api/v1/pokemon
 @app.get("/pokemon")
 async def list_pokemon(
     limit: int = Query(20, ge=1, le=100, description="How many to return"),
@@ -154,6 +155,7 @@ async def list_pokemon(
     }
 
 
+# https://yanjunapi.com/api/v1/pokemon/123
 @app.get("/pokemon/{name_or_id}")
 async def get_pokemon(name_or_id: str) -> Pokemon:
     return await get_pokemon_data(name_or_id)
