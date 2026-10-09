@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+
+h1 {
+    margin-bottom: 5px;
+}
+
+
+.instruction {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------
+   Search
+------------------------- */
+
+.search {
+    display: flex;
+    gap: 8px;
+    max-width: 380px;
+    margin: 0 auto 20px;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #f2c94c;
+}
+
+
+/* -------------------------
+   Pokémon Card
+------------------------- */
+
+.pokemon-card {
+    max-width: 380px;
+    margin: auto;
+    background-color: white;
+    border: 5px solid #f2c94c;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#pokemon-name {
+    font-size: 32px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+#pokemon-number {
+    color: #777;
+    margin-top: 5px;
+}
+
+#pokemon-image {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+}
+
+
+/* Types */
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-height: 30px;
+}
+
+.type-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #222;
+    background-color: #ddd;
+}
+
+.size {
+    color: #555;
+}
+
+
+/* -------------------------
+   Stats
+------------------------- */
+
+.stat {
+    display: grid;
+    grid-template-columns: 90px 1fr 40px;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.bar {
+    height: 14px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.4s;
+}
+
+
+/* -------------------------
+   Message & request log
+------------------------- */
+
+#message {
+    min-height: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+#message.error {
+    color: #d63031;
+}
+
+.request-log {
+    font-family: Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+/* -------------------------
+   Buttons
+------------------------- */
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#search-btn {
+    background-color: #ffd84d;
+}
+
+#random-btn {
+    background-color: #a29bfe;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
